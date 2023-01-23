@@ -1,0 +1,438 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: #171B21;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .batCircunferencia{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 150px;
+    top: 20px;
+    background-color: #8E8E89;
+    border: 5px solid #5A5A58;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    z-index: 10;
+    opacity: 0;
+    box-shadow: 0 0 120px -38px white;
+  }
+  
+  .luz{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 428px;
+    top: 97px;
+    border-top: 500px solid rgba(183,183,180,.2);
+    border-right: 60px solid transparent;
+    transform: rotate(-62.5deg);
+    opacity: 0;
+   }
+  
+  .luz1{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 440px;
+    top: 44px;
+    border-top: 500px solid rgba(183,183,180,.2);
+    border-left: 60px solid transparent;
+    transform: rotate(-40deg);
+    opacity: 0;
+  }
+  
+  .luzInterior1{
+    width: 11px;
+    height: 460px;
+    position: absolute;
+    background: rgba(183,183,180,.1);
+    left: 435px;
+    top: 44px;
+    transform: rotate(-46.9deg);
+    opacity: 0;
+  }
+  
+  .luzInterior2{
+    width: 11px;
+    height: 465px;
+    position: absolute;
+    background: rgba(244,244,244,.1);
+    left: 404px;
+    top: 74.5px;
+    
+    transform: rotate(-55.5deg);
+    opacity: 0;
+  }
+  
+  .luzCentral{
+    width:0;
+    height: 0;
+    position: absolute;
+    left: 417px;
+    top: 91.5px;
+    border-top: 430px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent; 
+    opacity: .1;
+    transform: rotate(-51.3deg);
+  }
+  
+  .batContainer{
+    width: 400px;
+    height: 300px;
+    border: 2px solid red;
+    position: relative;
+    left: 600px;
+    top: 40px;
+    
+  }
+  
+  .logoBat{
+    width: 180px;
+    height: 140px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    left: 6px;
+    top: 50px;
+    transform: rotate(47deg);
+  }
+  
+  .pieza1{
+    background: #8E8E89;
+    width: 60px;
+    height: 35px;
+    border-radius: 45%;
+    position: absolute;
+    left: 14px;
+    top: 152px;
+    transform: rotate(70deg);
+  }
+  
+  .pieza2{
+    background: #8E8E89;
+    width: 60px;
+    height: 35px;
+    border-radius: 45%;
+    position: absolute;
+    left: 44px;
+    top: 174px;
+    transform: rotate(-10deg);
+  }
+  
+  .pieza3{
+    background: #8E8E89;
+    width: 45px;
+    height: 62px;
+    border-radius: 45%;
+    position: absolute;
+    left: 5px;
+    top: 100px;
+    transform: rotate(30deg);
+  }
+  
+  .pieza4{
+     background: #8E8E89;
+    width: 45px;
+    height: 62px;
+    border-radius: 45%;
+    position: absolute;
+    left: 91px;
+    top: 169px;
+    transform: rotate(26.5deg)
+  }
+  
+  .pieza5{
+    width: 0px;
+    height: 0px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 70px solid #8E8E89;
+    border-radius: 50%;
+    transform: rotate(72deg);
+    position: absolute;
+    left: 60px;
+    top: 13px;
+  }
+  
+  .pieza6{
+    width: 0px;
+    height: 0px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 70px solid #8E8E89;
+    border-radius: 50%;
+    transform: rotate(-2deg);
+    position: absolute;
+    left: 118px;
+    top: 55px;
+  }
+  
+  .pieza7{
+    width: 37px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 50px solid #8E8E89;
+    transform: rotate(33deg);
+    position: absolute;
+    left: 114.9px;
+    top: 38px;
+  }
+  
+  .reflector{
+    background: #777A7A;
+    width: 80px;
+    height: 75px;
+    border-radius: 17px;
+    border: 4px solid #484949;
+    position: absolute;
+    left: 599px;
+    top: 414px;
+    /*transform: rotate(-55deg);*/
+    z-index: 1;
+  }
+  
+  .soporte{
+    height: 60px;
+    border: 5px solid #484949;
+    position: absolute;
+    left: 635px;
+    top: 485px;
+  }
+  
+  .base{
+    width: 90px;
+    border: 4px solid #484949;
+    position: absolute;
+    left: 595px;
+    top: 537px;
+    border-radius: 25px;
+  }
+  
+  @keyframes active{
+    from{
+      transform:rotate(0deg);
+    }to{
+      transform:rotate(-55deg);
+    }
+  }
+  
+  @keyframes encender{
+    from{
+      opacity: 0;
+    }
+    50%{
+      opacity: .5;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 580px){
+    .reflector{
+      background: #777A7A;
+      width: 40px;
+      height: 37.5px;
+      border-radius: 8.5px;
+      border: 2px solid #484949;
+      position: absolute;
+      left: 299.5px;
+      top: 207px;
+      /*transform: rotate(-55deg);*/
+      z-index: 1;
+    }
+    
+    .soporte{
+      height: 30px;
+      border: 2.5px solid #484949;
+      position: absolute;
+      left: 317.5px;
+      top: 242.5px;
+    }
+    
+    .base{
+      width: 45px;
+      border: 2px solid #484949;
+      position: absolute;
+      left: 297.5px;
+      top: 268.5px;
+      border-radius: 12.5px;
+     }
+    
+    .batCircunferencia{
+      width: 100px;
+      height: 125px;
+      position: absolute;
+      left: 75px;
+      top: 10px;
+      background-color: #8E8E89;
+      border: 2.5px solid #5A5A58;
+      border-radius: 50%;
+      transform: rotate(-15deg);
+      z-index: 10;
+      opacity: 0;
+      box-shadow: 0 0 60px -19px white;
+    }
+    
+    .logoBat{
+      width: 90px;
+      height: 70px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 3px;
+      top: 25px;
+      transform: rotate(47deg);
+    }
+  
+    .pieza1{
+      background: #8E8E89;
+      width: 30px;
+      height: 17.5px;
+      border-radius: 45%;
+      position: absolute;
+      left: 7px;
+      top: 76px;
+      transform: rotate(70deg);
+    }
+  
+    .pieza2{
+      background: #8E8E89;
+      width: 30px;
+      height: 17.5px;
+      border-radius: 45%;
+      position: absolute;
+      left: 22px;
+      top: 87px;
+      transform: rotate(-10deg);
+    }
+  
+     .pieza3{
+      background: #8E8E89;
+      width: 22.5px;
+      height: 31px;
+      border-radius: 45%;
+      position: absolute;
+      left: 2.5px;
+      top: 50px;
+      transform: rotate(30deg);
+    }
+  
+    .pieza4{
+      background: #8E8E89;
+      width: 22.5px;
+      height: 31px;
+      border-radius: 45%;
+      position: absolute;
+      left: 45.5px;
+      top: 84.5px;
+      transform: rotate(26.5deg)
+    }
+  
+    .pieza5{
+      width: 0px;
+      height: 0px;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-bottom: 35px solid #8E8E89;
+      border-radius: 50%;
+      transform: rotate(72deg);
+      position: absolute;
+      left: 30px;
+      top: 6.5px;
+    }
+  
+    .pieza6{
+      width: 0px;
+      height: 0px;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-bottom: 35px solid #8E8E89;
+      border-radius: 50%;
+      transform: rotate(-2deg);
+      position: absolute;
+      left: 59px;
+      top: 27.5px;
+    }
+  
+    .pieza7{
+      width: 18.5px;
+      height: 0px;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-top: 25px solid #8E8E89;
+      transform: rotate(33deg);
+      position: absolute;
+      left: 57.45px;
+      top: 19px;
+    }
+    .luz{
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 214px;
+      top: 48.5px;
+      border-top: 250px solid rgba(183,183,180,.2);
+      border-right: 30px solid transparent;
+      transform: rotate(-62.5deg);
+      opacity: 0;
+    }
+  
+    .luz1{
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 220px;
+      top: 22px;
+      border-top: 250px solid rgba(183,183,180,.2);
+      border-left: 30px solid transparent;
+      transform: rotate(-40deg);
+      opacity: 0;
+    }
+  
+    .luzInterior1{
+      width: 5.5px;
+      height: 230px;
+      position: absolute;
+      background: rgba(183,183,180,.1);
+      left: 217.5px;
+      top: 22px;
+      transform: rotate(-46.9deg);
+      opacity: 0;
+    }
+  
+    .luzInterior2{
+      width: 5.5px;
+      height: 232.5px;
+      position: absolute;
+      background: rgba(244,244,244,.1); 
+      left: 202px;
+      top: 37.25px;
+      transform: rotate(-55.5deg);
+      opacity: 0;
+    }
+  
+    .luzCentral{
+      width:0;
+      height: 0;
+      position: absolute;
+      left: 208.5px;
+      top: 45.75px;
+      border-top: 215px solid transparent;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent; 
+      opacity: .1;
+      transform: rotate(-51.3deg);
+    } 
+  }
